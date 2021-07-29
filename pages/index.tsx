@@ -1,10 +1,13 @@
-const index = () => {
+import { Layout } from "../src/template/Layout";
+
+const Home = () => {
   return (
-    <div>
-      <h1>Hello </h1>
-    </div>
-  )
-}
+    <Layout>
+      <div className="">
+        <h3>helle world</h3>
+      </div>
+    </Layout>
+  );
+};
 
-export default index
-
+export default Home;
