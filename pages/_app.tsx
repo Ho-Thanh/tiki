@@ -1,7 +1,6 @@
 import React from "react";
-import "../styles/style.scss"
-import "../styles/globals.css";
-
+import "../styles/style.scss";
+import "../styles/global.css";
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
 }
