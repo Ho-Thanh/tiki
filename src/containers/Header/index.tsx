@@ -47,6 +47,7 @@ export const Header = () => {
               type="text"
               placeholder="Tìm sản phẩm, danh mục hay thương hiệu mong muốn ..."
               className="w-10/12 h-10 rounded-l-md"
+              value={searchValueState}
               onChange={(e) => {
                 setSearchValueState(e.target.value);
               }}
