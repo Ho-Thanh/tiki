@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Item } from "../";
+
+
 export const Header = () => {
-  const [items, setItems] = useState([
+  const items = [
     { title: "tất cả thịt rau củ", link: "" },
     { title: "rau củ quả", link: "" },
     {
@@ -12,13 +13,13 @@ export const Header = () => {
     { title: "trái cây", link: "" },
     { title: "hải sản", link: "" },
     { title: "gạo", link: "" },
-  ]);
+  ];
   const [searchValueState, setSearchValueState] = useState<string>();
   return (
-    <div className="col-span-12 bg-blue-500">
-      <div className="items-center w-10/12 m-auto">
-        <div className="flex col-span-1 justify-items-center">
-          <div className="p-4">
+    <div className="bg-blue-500 ">
+      <div className="items-center ">
+        <div className="flex w-10/12 m-auto justify-items-center ">
+          <div className="px-2 py-4">
             <img
               src="https://salt.tikicdn.com/ts/upload/ae/f5/15/2228f38cf84d1b8451bb49e2c4537081.png"
               alt="logo Tiki"
@@ -41,7 +42,7 @@ export const Header = () => {
               </span>
             </div>
           </a>
-          <div className="flex w-6/12 mx-4 my-5">
+          <div className="flex flex-1 mx-2 my-5 mr-5 ">
             <input
               data-view-id="main_search_form_input"
               type="text"
@@ -62,10 +63,10 @@ export const Header = () => {
               Tìm Kiếm
             </button>
           </div>
-          <div className="flex">
+          <div className="flex ">
             <div className="flex items-center">
               <img
-                className="w-8 h-8 mx-4"
+                className="w-8 h-8 "
                 src="https://salt.tikicdn.com/ts/upload/67/de/1e/90e54b0a7a59948dd910ba50954c702e.png"
               />
             </div>
@@ -93,7 +94,7 @@ export const Header = () => {
             </div>
           </div>
         </div>
-        <div className="flex pb-4 justify-items-center">
+        <div className="flex w-10/12 pb-4 m-auto justify-items-center ">
           <a href="#">
             <img
               src="https://salt.tikicdn.com/ts/upload/e5/1d/22/61ff572362f08ead7f34ce410a4a6f96.png"
@@ -102,7 +103,13 @@ export const Header = () => {
             />
           </a>
           <div className="flex ml-32 justify-items-center">
-            <Item items={items} />
+            
+            {items.map((item,id)=>{
+              return <a className="mx-2 text-white" key={id}  href={item.link}>
+                {item.title}
+                </a>
+            })}
+            
           </div>
           <a className="absolute flex px-3 bg-blue-200 rounded-md right-40">
             <img

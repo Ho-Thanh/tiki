@@ -1,5 +1,5 @@
 import React from "react";
-import { Footer, Header } from "../containers";
+import { Footer, Header,SimpleSlider } from "../containers";
 
 export const Layout = ({ children }) => {
   return (
